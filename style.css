@@ -8,6 +8,27 @@ body {
     display: flex;
 }
 
+/* ====iconlinks====== */
+.icon-links img{
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+}
+
+.icon-links a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 10px 0;
+    color: #007bA7;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.icon links a:hover {
+    color: #D96C32;
+}
+
 /* ===== SIDEBAR ===== */
 
 .sidebar {
