@@ -6,6 +6,25 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
+<script>
+    const slide = document.querySelector('.carousel-slide');
+    const images = document.querySelectorAll('.carousel-slide img');
+
+    let counter = 0;
+
+    document.querySelector('.next').addEventListener('click', () => {
+        counter = (counter + 1) % images.length;
+        slide.style.transform = `translateX(-${counter * 100}%)`;
+    });
+
+    document.querySelector('.prev').addEventListener('click', () => {
+        counter = (counter - 1 + images.length) % images.length;
+        slide.style.transform = `translateX(-${counter * 100}%)`;
+    });
+</script>
+
+
+    
 <body>
 
 <!-- SIDEBAR -->
@@ -18,17 +37,25 @@
        geophysics, seismology, or your areas of interest.</p>
 
 
-    <div class="icon-links">
-        <a href="mailto:gisellesanramon@ucsb.edu">
-            <img src="images/email.png" alt="Email icon">
-            Email
-        <a href="https://github.com/GiselleSR">
-            <img src="images/github.svg" alt="Github icon">
-            Github
-        <a href="https://www.linkedin.com/in/gisellesanramon/">
-            <img src="images/linkedin.svg" alt="Linkedin icon">
-            Linkedin
-    </div>
+<div class="icon-links">
+
+    <a href="mailto:gisellesanramon@ucsb.edu">
+        <img src="images/email.png" alt="Email icon">
+        Email
+    </a>
+
+    <a href="https://github.com/GiselleSR" target="_blank">
+        <img src="images/github.svg" alt="Github icon">
+        Github
+    </a>
+
+    <a href="https://www.linkedin.com/in/gisellesanramon/" target="_blank">
+        <img src="images/linkedin.svg" alt="Linkedin icon">
+        Linkedin
+    </a>
+
+</div>
+
 </div>
     
 <!-- MAIN CONTENT -->
@@ -49,6 +76,19 @@
     <h2>About Me</h2>
     <p>Write a few sentences about your background, affiliations,
        and current research directions. You can add more sections as needed.</p>
+
+<h2>Photo Gallery</h2>
+
+<div class="carousel-container">
+    <div class="carousel-slide">
+        <img src="images/carousel/photo1.jpg">
+        <img src="images/carousel/photo2.jpg">
+        <img src="images/carousel/photo3.jpg">
+    </div>
+
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+</div>
 
 </div>
 
