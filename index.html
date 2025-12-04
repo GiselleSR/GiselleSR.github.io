@@ -5,25 +5,6 @@
     <title>Giselle San Ramon | Home</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
-<script>
-    const slide = document.querySelector('.carousel-slide');
-    const images = document.querySelectorAll('.carousel-slide img');
-
-    let counter = 0;
-
-    document.querySelector('.next').addEventListener('click', () => {
-        counter = (counter + 1) % images.length;
-        slide.style.transform = `translateX(-${counter * 100}%)`;
-    });
-
-    document.querySelector('.prev').addEventListener('click', () => {
-        counter = (counter - 1 + images.length) % images.length;
-        slide.style.transform = `translateX(-${counter * 100}%)`;
-    });
-</script>
-
-
     
 <body>
 
@@ -96,4 +77,21 @@
 </div>
 
 </body>
+
+<script>
+    const slide = document.querySelector('.carousel-slide');
+    const images = document.querySelectorAll('.carousel-slide img');
+
+    let counter = 0;
+
+    document.querySelector('.next').addEventListener('click', () => {
+        counter = (counter + 1) % images.length;
+        slide.style.transform = `translateX(-${counter * 100}%)`;
+    });
+
+    document.querySelector('.prev').addEventListener('click', () => {
+        counter = (counter - 1 + images.length) % images.length;
+        slide.style.transform = `translateX(-${counter * 100}%)`;
+    });
+</script>    
 </html>
