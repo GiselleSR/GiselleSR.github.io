@@ -8,8 +8,9 @@ body {
     display: flex;
 }
 
-/* ====iconlinks====== */
-.icon-links img{
+/* ===== ICON LINKS ===== */
+
+.icon-links img {
     width: 18px;
     height: 18px;
     object-fit: contain;
@@ -20,12 +21,13 @@ body {
     align-items: center;
     gap: 8px;
     margin: 10px 0;
-    color: #007bA7;
+    color: #007BA7;
     text-decoration: none;
     font-weight: 600;
 }
 
-.icon links a:hover {
+/* FIXED: your hover selector */
+.icon-links a:hover {
     color: #D96C32;
 }
 
@@ -60,7 +62,8 @@ body {
 }
 
 .sidebar .icon-links a {
-    display: block;
+    display: flex;
+    align-items: center;
     margin: 10px 0;
     color: #007BA7;
     text-decoration: none;
@@ -107,6 +110,48 @@ body {
     color: #007BA7;
 }
 
+/* ===== CAROUSEL STYLING ===== */
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    margin: 25px auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.carousel-slide {
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+}
+
+.carousel-slide img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Carousel buttons */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
 /* ===== MOBILE RESPONSIVE ===== */
 
 @media (max-width: 800px) {
@@ -123,5 +168,9 @@ body {
     .main {
         margin-left: 0;
         padding: 20px;
+    }
+    .prev, .next {
+        padding: 8px;
+        font-size: 20px;
     }
 }
