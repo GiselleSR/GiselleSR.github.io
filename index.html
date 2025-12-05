@@ -76,8 +76,6 @@
 
 </div>
 
-</body>
-
 <script>
     const slide = document.querySelector('.carousel-slide');
     const images = document.querySelectorAll('.carousel-slide img');
@@ -93,5 +91,7 @@
         counter = (counter - 1 + images.length) % images.length;
         slide.style.transform = `translateX(-${counter * 100}%)`;
     });
-</script>    
+</script> 
+    
+</body>   
 </html>
